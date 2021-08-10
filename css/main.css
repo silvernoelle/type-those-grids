@@ -1,7 +1,68 @@
 html {
   box-sizing: border-box;
+  font-family: Merriweather, serif;
+  line-height: 1.5;
 }
 
 *, *::before, *::after {
   box-sizing: inherit;
+}
+
+h1 {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 1.8rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+dt {
+  font-style: italic;
+  font-weight: normal;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: .75rem;
+  grid-template-areas:
+    "banner banner banner"
+    "image1 image2 image3"
+}
+
+.banner, .text {
+  grid-area: banner;
+}
+
+figure {
+  margin-left: 0;
+  margin-right: .75rem;
+  margin-top: .75rem;
+  margin-bottom: 1rem;
+}
+
+.text {
+  color: white;
+  align-self: end;
+}
+
+.text h2 {
+  margin-top: 0;
+  margin-botton: 0;
+}
+
+.text p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
