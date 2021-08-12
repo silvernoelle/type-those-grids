@@ -14,15 +14,21 @@ h1 {
   font-size: 1.8rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+  grid-area: header;
 }
 
 h2 {
   font-style: italic;
   font-weight: normal;
   font-size: 1.5rem;
+  margin-bottom: 0;
 }
 
 dl {
+  margin-top: 0;
+}
+
+dt {
   font-style: italic;
   font-weight: normal;
 }
@@ -31,38 +37,40 @@ img {
   max-width: 100%;
 }
 
-main {
+body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto;
   gap: .75rem;
   grid-template-areas:
+    "header header header"
     "banner banner banner"
-    "image1 image2 image3"
+    "main main main";
 }
 
-body {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+figure {
+  margin-left: 0;
+  margin-right: .125rem;
+  margin-top: .25rem;
+  margin-bottom: 1rem;
+}
+
+main {
+  grid-area: main;
+}
+
+figcaption {
+  margin-left: .75rem;
+}
+
+dd {
+  margin-left: 1rem;
 }
 
 .banner, .text {
   grid-area: banner;
 }
 
-figure {
-  margin-left: 0;
-  margin-right: .75rem;
-  margin-top: .75rem;
-  margin-bottom: 1rem;
-}
-
-figcaption {
-  line-height: 1.5rem;
-  gap: .75rem;
-}
 .banner {
   position: relative;
   text-align: left;
@@ -73,6 +81,7 @@ figcaption {
   position: absolute;
   bottom: 8px;
   left: 16px;
+  align-self: end;
   color: white;
   margin-bottom: 1.5rem;
 }
