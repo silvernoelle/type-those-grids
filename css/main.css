@@ -22,7 +22,7 @@ h2 {
   font-size: 1.5rem;
 }
 
-dt {
+dl {
   font-style: italic;
   font-weight: normal;
 }
@@ -41,6 +41,13 @@ main {
     "image1 image2 image3"
 }
 
+body {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .banner, .text {
   grid-area: banner;
 }
@@ -52,14 +59,27 @@ figure {
   margin-bottom: 1rem;
 }
 
-.text {
+figcaption {
+  line-height: 1.5rem;
+  gap: .75rem;
+}
+.banner {
+  position: relative;
+  text-align: left;
   color: white;
-  align-self: end;
+}
+
+.text {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  color: white;
+  margin-bottom: 1.5rem;
 }
 
 .text h2 {
   margin-top: 0;
-  margin-botton: 0;
+  margin-bottom: 0;
 }
 
 .text p {
