@@ -1,97 +1,65 @@
 html {
   box-sizing: border-box;
-  font-family: Merriweather, serif;
   line-height: 1.5;
+  font-family: Merriweather, serif;
 }
 
 *, *::before, *::after {
   box-sizing: inherit;
 }
 
-h1 {
+body {
+  font-size: .9rem;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, dt {
   font-style: italic;
-  font-weight: normal;
-  font-size: 1.8rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  grid-area: header;
+}
+
+h1 {
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
 }
 
 h2 {
-  font-style: italic;
-  font-weight: normal;
-  font-size: 1.5rem;
-  margin-bottom: 0;
+  font-size: 1.3rem;
 }
 
-dl {
-  margin-top: 0;
-}
-
-dt {
-  font-style: italic;
-  font-weight: normal;
-}
-
-img {
-  max-width: 100%;
-}
-
-body {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: .75rem;
-  grid-template-areas:
-    "header header header"
-    "banner banner banner"
-    "main main main";
-}
-
-figure {
-  margin-left: 0;
-  margin-right: .125rem;
-  margin-top: .25rem;
-  margin-bottom: 1rem;
-}
-
-main {
-  grid-area: main;
+.banner-text h2, .banner-text p {
+  margin: 0;
 }
 
 figcaption {
-  margin-left: .75rem;
+  padding: .2rem 1.2rem;
 }
 
-dd {
-  margin-left: 1rem;
+img {
+  width: 100%;
 }
 
-.banner, .text {
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "banner banner banner"
+    "box1 box2 box3";
+  gap: .75rem;
+}
+
+main > img {
   grid-area: banner;
+  max-width: inherit;
 }
 
-.banner {
-  position: relative;
-  text-align: left;
-  color: white;
-}
-
-.text {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
+.banner-text {
+  grid-area: banner;
   align-self: end;
-  color: white;
-  margin-bottom: 1.5rem;
+  color: #fff;
+  padding: 1.5rem 1rem;
 }
 
-.text h2 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.text p {
-  margin-top: 0;
-  margin-bottom: 0;
+figure {
+  margin: 0;
 }
